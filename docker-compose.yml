@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  app:
+    image: rust-for-s3
+    container_name: app
+    build: ./docker/rust
+    tty: true
+    volumes:
+      - .:/workspace
+    ports:
+      - 8083:8083
